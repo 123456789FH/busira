@@ -1,6 +1,6 @@
 const PREFIX='basirah-static-'+new URL(self.registration.scope).pathname+':';
-const CACHE=PREFIX+'v1.0.0';
-const FILES=['./','./index.html','./style.css','./app.js','./omr.js','./manifest.webmanifest','./assets/icon.svg','./assets/arabic-regular.ttf','./assets/arabic-bold.ttf'];
+const CACHE=PREFIX+'v1.0.1';
+const FILES=['./','./index.html','./style.css?v=1.0.1','./app.js?v=1.0.1','./omr.js','./manifest.webmanifest','./assets/icon.svg','./assets/arabic-regular.ttf','./assets/arabic-bold.ttf'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url),base=new URL(self.registration.scope);if(e.request.method!=='GET'||u.origin!==base.origin||!u.pathname.startsWith(base.pathname))return;
