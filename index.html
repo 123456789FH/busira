@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>بصيرة | من الإجابة إلى الفهم</title>
+  <meta name="description" content="صحّح أوراق التظليل، وافهم نتائجك. تطبيق عربي مجاني يعمل على جهازك لإعداد الاختبارات وتحليل الأسئلة والمهارات.">
+  <meta name="theme-color" content="#006c67"><link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+  <script src="omr.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <aside class="sidebar" aria-label="التنقل الرئيسي">
+    <a class="brand" href="#home"><img src="assets/icon.svg" alt="" width="48" height="48"><span>بصيرة<small>من الإجابة إلى الفهم</small></span></a>
+    <div class="nav-label">مساحة التقييم</div><nav id="navigation"></nav>
+    <div class="side-note"><span class="status-dot"></span><strong>بياناتك تبقى معك</strong><p>تُعالَج الصور على جهازك.<br>بدون تسجيل أو اشتراكات.</p></div>
+    <div class="side-bottom"><span class="avatar">ف</span><div><b>إعداد: أ/ فاطمة هزازي</b><small>ملتقى التعليم التفاعلي</small></div></div>
+  </aside>
+  <div class="app"><header class="topbar"><div><span class="top-eyebrow">بصيرة للتصحيح والتحليل</span><span class="crumb" id="crumb">نظرة عامة</span></div><div class="top-actions"><button class="icon-btn" id="theme" title="تغيير المظهر" aria-label="تغيير المظهر"></button><button class="btn small" data-nav="guide">دليل الاستخدام</button><span class="local-pill"><i></i>حفظ محلي</span></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="footer">أ/ فاطمة هزازي <span>—</span> ملتقى معلمي ومعلمات الرياضيات <span>—</span> ملتقى التعليم التفاعلي</footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+  <div id="print-area"></div>
+  <input hidden id="file-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+  <input hidden id="backup-input" type="file" accept="application/json,.json">
+</body></html>
